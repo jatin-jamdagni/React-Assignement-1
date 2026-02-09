@@ -1,0 +1,112 @@
+[
+  {
+    "id": "task-01",
+    "title": "Prepare client presentation",
+    "description": "Update slides with Q1 results and add recommendations",
+    "priority": "high",
+    "category": "work",
+    "dueDate": "2026-02-12",
+    "completed": false,
+    "createdAt": "2026-02-07T09:30:00.000Z",
+    "updatedAt": "2026-02-09T14:20:00.000Z"
+  },
+  {
+    "id": "task-02",
+    "title": "Morning run 5km",
+    "description": "Try to keep pace under 6 min/km",
+    "priority": "medium",
+    "category": "health",
+    "dueDate": "2026-02-10",
+    "completed": true,
+    "createdAt": "2026-02-08T18:15:00.000Z",
+    "updatedAt": "2026-02-09T06:45:00.000Z"
+  },
+  {
+    "id": "task-03",
+    "title": "Review TypeScript handbook - Generics",
+    "description": "Take notes on advanced usage examples",
+    "priority": "low",
+    "category": "learning",
+    "dueDate": null,
+    "completed": false,
+    "createdAt": "2026-02-09T10:10:00.000Z",
+    "updatedAt": "2026-02-09T10:10:00.000Z"
+  },
+  {
+    "id": "task-04",
+    "title": "Pay electricity bill",
+    "description": "Due date is end of week",
+    "priority": "medium",
+    "category": "personal",
+    "dueDate": "2026-02-11",
+    "completed": false,
+    "createdAt": "2026-02-08T22:40:00.000Z",
+    "updatedAt": "2026-02-09T17:55:00.000Z"
+  },
+  {
+    "id": "task-05",
+    "title": "Fix navigation bug on mobile",
+    "description": "Menu overlaps content when opened",
+    "priority": "high",
+    "category": "work",
+    "dueDate": "2026-02-13",
+    "completed": false,
+    "createdAt": "2026-02-06T13:20:00.000Z",
+    "updatedAt": "2026-02-09T15:30:00.000Z"
+  },
+  {
+    "id": "task-06",
+    "title": "Meal prep for next 3 days",
+    "description": "Chicken, rice, veggies + snacks",
+    "priority": "medium",
+    "category": "health",
+    "dueDate": "2026-02-10",
+    "completed": true,
+    "createdAt": "2026-02-08T19:00:00.000Z",
+    "updatedAt": "2026-02-09T08:15:00.000Z"
+  },
+  {
+    "id": "task-07",
+    "title": "Read 30 pages of Atomic Habits",
+    "description": "Chapter 4–5",
+    "priority": "low",
+    "category": "learning",
+    "dueDate": null,
+    "completed": false,
+    "createdAt": "2026-02-09T11:45:00.000Z",
+    "updatedAt": "2026-02-09T11:45:00.000Z"
+  },
+  {
+    "id": "task-08",
+    "title": "Schedule dentist appointment",
+    "description": "Been 8 months already",
+    "priority": "medium",
+    "category": "personal",
+    "dueDate": "2026-02-15",
+    "completed": false,
+    "createdAt": "2026-02-09T08:55:00.000Z",
+    "updatedAt": "2026-02-09T08:55:00.000Z"
+  },
+  {
+    "id": "task-09",
+    "title": "Update project roadmap",
+    "description": "Add Q2 milestones and dependencies",
+    "priority": "high",
+    "category": "work",
+    "dueDate": "2026-02-14",
+    "completed": false,
+    "createdAt": "2026-02-05T10:10:00.000Z",
+    "updatedAt": "2026-02-09T16:20:00.000Z"
+  },
+  {
+    "id": "task-10",
+    "title": "Evening yoga session",
+    "description": "Follow 20 min flexibility flow",
+    "priority": "low",
+    "category": "health",
+    "dueDate": null,
+    "completed": true,
+    "createdAt": "2026-02-07T17:30:00.000Z",
+    "updatedAt": "2026-02-09T07:10:00.000Z"
+  }
+]
