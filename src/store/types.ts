@@ -1,6 +1,7 @@
-export type Priority = 'low' | 'medium' | 'high';
-export type Category = 'work' | 'personal' | 'health' | 'learning';
-export type FilterStatus = 'all' | 'active' | 'completed';
+export type Priority = "low" | "medium" | "high";
+export type Category = "work" | "personal" | "health" | "learning";
+export type FilterStatus = "all" | "active" | "completed";
+export type SortOrder = "newest" | "oldest";
 
 export interface Task {
   id: string;
@@ -22,5 +23,6 @@ export interface TasksState {
   };
   filter: FilterStatus;
   searchQuery: string;
-  categoryFilter: Category | 'all';
+  categoryFilter: Category | "all";
+  sortOrder: SortOrder;
 }

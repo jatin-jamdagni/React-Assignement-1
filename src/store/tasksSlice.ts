@@ -1,5 +1,11 @@
 import { createSlice, type PayloadAction } from "@reduxjs/toolkit";
-import type { Category, FilterStatus, Task, TasksState } from "./types";
+import type {
+  Category,
+  FilterStatus,
+  Task,
+  TasksState,
+  SortOrder,
+} from "./types";
 import defaultTasks from "@/lib/data.json";
 
 const HISTORY_LIMIT = 50;
@@ -38,6 +44,7 @@ const initialState: FullState = {
   filter: "all",
   searchQuery: "",
   categoryFilter: "all",
+  sortOrder: "newest",
 };
 
 const pushHistory = (state: FullState) => {
@@ -126,6 +133,9 @@ const tasksSlice = createSlice({
     setCategoryFilter: (state, action: PayloadAction<Category | "all">) => {
       state.categoryFilter = action.payload;
     },
+    setSortOrder: (state, action: PayloadAction<SortOrder>) => {
+      state.sortOrder = action.payload;
+    },
     reorderTasks: (
       state,
       action: PayloadAction<{ fromIndex: number; toIndex: number }>,
@@ -177,6 +187,7 @@ export const {
   setFilter,
   setSearchQuery,
   setCategoryFilter,
+  setSortOrder,
   reorderTasks,
   undo,
   redo,

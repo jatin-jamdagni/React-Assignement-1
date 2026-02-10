@@ -1,9 +1,13 @@
-import { useRef } from 'react';
-import { useAppDispatch, useAppSelector } from '@/store';
-import { undo, redo, importTasks } from '@/store/tasksSlice';
-import { selectCanUndo, selectCanRedo, selectAllTasks } from '@/store/selectors';
-import { Undo2, Redo2, Download, Upload } from 'lucide-react';
-import { toast } from 'sonner';
+import { useRef } from "react";
+import { useAppDispatch, useAppSelector } from "@/store";
+import { undo, redo, importTasks } from "@/store/tasksSlice";
+import {
+  selectCanUndo,
+  selectCanRedo,
+  selectAllTasks,
+} from "@/store/selectors";
+import { Undo2, Redo2, Download, Upload } from "lucide-react";
+import { toast } from "sonner";
 
 const ToolbarActions = () => {
   const dispatch = useAppDispatch();
@@ -14,14 +18,14 @@ const ToolbarActions = () => {
 
   const handleExport = () => {
     const data = JSON.stringify(allTasks, null, 2);
-    const blob = new Blob([data], { type: 'application/json' });
+    const blob = new Blob([data], { type: "application/json" });
     const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
+    const a = document.createElement("a");
     a.href = url;
-    a.download = `tasks-${new Date().toISOString().split('T')[0]}.json`;
+    a.download = `tasks-${new Date().toISOString().split("T")[0]}.json`;
     a.click();
     URL.revokeObjectURL(url);
-    toast.success('Tasks exported successfully!');
+    toast.success("Tasks exported successfully!");
   };
 
   const handleImport = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -36,18 +40,18 @@ const ToolbarActions = () => {
           dispatch(importTasks(tasks));
           toast.success(`Imported ${tasks.length} tasks!`);
         } else {
-          toast.error('Invalid file format');
+          toast.error("Invalid file format");
         }
       } catch {
-        toast.error('Failed to parse file');
+        toast.error("Failed to parse file");
       }
     };
     reader.readAsText(file);
-    if (fileInputRef.current) fileInputRef.current.value = '';
+    if (fileInputRef.current) fileInputRef.current.value = "";
   };
 
   return (
-    <div className="flex items-center gap-1">
+    <div className="flex items-center w-full  md:w-auto mt-3 md:mt-0 justify-end gap-1">
       <button
         onClick={() => dispatch(undo())}
         disabled={!canUndo}

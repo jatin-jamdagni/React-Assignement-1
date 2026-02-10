@@ -7,7 +7,7 @@ const selectTasks = (state: RootState): Task[] => state.tasks.history.present;
 export const selectFilteredTasks = createSelector(
   [selectTasksState, selectTasks],
   (
-    { filter, searchQuery, categoryFilter }: TasksState,
+    { filter, searchQuery, categoryFilter, sortOrder }: TasksState,
     tasks: Task[],
   ): Task[] => {
     let filtered = tasks;
@@ -26,6 +26,18 @@ export const selectFilteredTasks = createSelector(
         (t: Task) =>
           t.title.toLowerCase().includes(q) ||
           t.description.toLowerCase().includes(q),
+      );
+    }
+
+    if (sortOrder === "newest") {
+      filtered = [...filtered].sort(
+        (a, b) =>
+          new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime(),
+      );
+    } else if (sortOrder === "oldest") {
+      filtered = [...filtered].sort(
+        (a, b) =>
+          new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime(),
       );
     }
 
